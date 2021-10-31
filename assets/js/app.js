@@ -65792,7 +65792,7 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-__webpack_require__(/*! ./components/modules/Test */ "./resources/js/components/modules/Test.js");
+__webpack_require__(/*! ./components/modules/Index */ "./resources/js/components/modules/Index.js");
 
 /***/ }),
 
@@ -65841,10 +65841,10 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/js/components/modules/Test.js":
-/*!*************************************************!*\
-  !*** ./resources/js/components/modules/Test.js ***!
-  \*************************************************/
+/***/ "./resources/js/components/modules/Index.js":
+/*!**************************************************!*\
+  !*** ./resources/js/components/modules/Index.js ***!
+  \**************************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -65865,7 +65865,7 @@ var Test = function Test() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Hello, I am a react component with JSX, if you are seeing me, you followed the instructions correctly:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "To start clone this repository"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("code", null, "git clone https://github.com/xfxstudios/codeigniterreact.git"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Then on your console, run the node installer:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("code", null, "npm install"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "then to run or compile:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("code", null, "npm run dev"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "then to run or compile:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("code", null, "npm run dev"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "You can add your components in the path:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("code", null, "resources/js/components/modules"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "preinstalled packages:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\"cross-env\": \"^7.0.2\""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\"@material-ui/core\": \"^4.11.0\""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\"@material-ui/icons\": \"^4.9.1\""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\"@material-ui/lab\": \"^4.0.0-alpha.56\""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\"axios-react\": \"^2.0.2\""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\"flare-react\": \"^1.0.7\""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\"moment\": \"^2.27.0\""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\"react-bootstrap\": \"^1.3.0\""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\"react-content-loader\": \"^5.1.1\""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\"react-moment\": \"^0.9.7\""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\"react-select-2\": \"^2.0.11\""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\"sweetalert\": \"^2.1.2\""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\"uikit-react\": \"^3.0.20\""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\"laravel-mix\": \"^5.0.7"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\"jquery\": \"^3.5.1\""))));
 };
 
-var container = document.getElementById('test');
+var container = document.getElementById('root');
 
 if (container) {
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Test, null), container);
@@ -65880,8 +65880,8 @@ if (container) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\laragon\www\ci3react\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\laragon\www\ci3react\resources\css\style.scss */"./resources/css/style.scss");
+__webpack_require__(/*! D:\wamp64\www\CI_TODO\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\wamp64\www\CI_TODO\resources\css\style.scss */"./resources/css/style.scss");
 
 
 /***/ })

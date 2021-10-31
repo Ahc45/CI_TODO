@@ -1,3 +1,3 @@
 require('./bootstrap');
 
-require('./components/modules/Test');
+require('./components/modules/Index');
