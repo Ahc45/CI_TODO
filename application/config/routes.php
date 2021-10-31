@@ -7,4 +7,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 $route['default_controller'] = "todos";
-$route['todos/(:any)'] = "todos/$1";
+$route['todos/get_todos'] = "todos/get_todos";
+$route['todos/post_todo'] = "todos/post_todo";
+$route['todos/updates_todo/(:num)'] = "todos/updates_todo/$1s";

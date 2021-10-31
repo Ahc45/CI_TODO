@@ -10,4 +10,8 @@
     - git push --set-upstream origin feature/todo-model
     - git add .
     - git commit -m "Created Todo model"
+    - git add .
+    - git commit -m "Set up core frontend"
+    - git push 
+    - git flow feature start create-function
     
