@@ -1,0 +1,15 @@
+.todo-list {
+  position: relative;
+}
+
+.todo-list:hover .del-btn {
+  display: block;
+}
+
+.todo-list .del-btn {
+  color: #ff8080;
+  display: none;
+  position: absolute;
+  right: 0;
+}
+

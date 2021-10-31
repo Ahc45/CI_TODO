@@ -20,6 +20,18 @@ class Todos extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->view('main');
+		
 	}
+	function get_todos(){
+		$this->load->model('todos_m');
+		$todos = $this->todos_m->get_todos([])->result();
+		if($todos){
+			response([
+				'data' => ['todos' => $todos],
+				'status'=> 200
+			]);
+		}
+	}
+	
 }

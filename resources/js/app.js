@@ -1,3 +1,3 @@
 require('./bootstrap');
 
-require('./components/modules/Index');
+require('./components/modules/Todo');

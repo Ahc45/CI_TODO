@@ -7,7 +7,7 @@ class Todos_m extends MY_Model
 	protected $_order_by = 'id';
 	protected $_timestamps = TRUE;
 
-	function get_todo($params, $is_num_rows = false)
+	function get_todos($params, $is_num_rows = false)
 	{
 		$this->_filters($params);
 
@@ -24,7 +24,7 @@ class Todos_m extends MY_Model
 			if (array_key_exists('select', $params) && $params['select'] != null) {
 				$this->db->select($params['select']);
 			} else {
-				$this->db->select('sdg.*');
+				$this->db->select($this->_table_name.'.*');
 			}
 
 			$limit = (array_key_exists('limit', $params)) ? $params['limit'] : null;
@@ -46,12 +46,12 @@ class Todos_m extends MY_Model
 
 			$this->db->order_by($params['order_by'], $ob);
 		} else {
-			$this->db->order_by('sdg.' . $this->_primary_key, 'desc');
+			$this->db->order_by('todos.' . $this->_primary_key, 'desc');
 		}
 
 		if (array_key_exists('q', $params) && $params['q'] != null) {
 			$q = $this->db->escape_like_str($params['q']);
-			$this->db->where("CONCAT(sdg.name, ' ', sdg.description, ' ', sdg.enum_name) LIKE '%" . $q . "%'", NULL, FALSE);
+			$this->db->where("CONCAT(todos.name, ' ', todos.description) LIKE '%" . $q . "%'", NULL, FALSE);
 		}
 
         

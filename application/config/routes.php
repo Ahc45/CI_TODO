@@ -7,4 +7,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 $route['default_controller'] = "todos";
-$route['Todos/(:any)'] = "Todos/$1";
+$route['todos/(:any)'] = "todos/$1";

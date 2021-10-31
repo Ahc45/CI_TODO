@@ -108,6 +108,35 @@ if (!function_exists('load_assets')) {
 }
 
 
+if (!function_exists('tester')) {
+	function tester($var,$dump = false, $state = 1)
+	{
+		print_r("<pre>");
+		if($dump){
+			var_dump($var);
+		}else{
+			print_r($var);
+		}
+		print_r("<pre>");
+		if($state){
+			die();
+		}
+	}
+}
+if (!function_exists('response')) {
+	function response($response = null)
+	{
+		if(!empty($response['status'] == 200)){
+			header('Content-Type: application/json');
+			echo json_encode( $response['data']);
+		}
+		
+		if(empty($response)){
+			header("HTTP/1.1 404 Not Found");
+		}
+	}
+}
+
 
 /* End of file ms_helper.php */
 /* Location: ./application/helpers/ms_helper.php */
