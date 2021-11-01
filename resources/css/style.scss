@@ -1,22 +1,60 @@
+body{
+	background-color: #EDEDED;
+}
+.main {
+	-webkit-box-shadow: 3px 11px 11px 0px rgba(125, 125, 125, 0.18),
+		-6px -2px 11px 0px rgba(255, 255, 255, 0.87);
+	box-shadow: 3px 11px 11px 0px rgba(125, 125, 125, 0.18),
+		-6px -2px 11px 0px rgba(255, 255, 255, 0.87) !important;
+	margin: auto;
+	background-color: #EDEDED !important;
+	border-radius: 15px !important;
+	margin-top: 50px;
+	margin-bottom: 20px !important;
+	.hero-text {
+		margin: 30px;
+	}
+	min-width: 60% ;
+}
+
+.new-task {
+	margin: 15px 3%;
+	text-align: center;
+}
 .todo-list {
-    position: relative;
+	position: relative;
 	padding-inline-start: 0px;
-    &:hover{
-        .del-btn,.update-btn {
-            display: block;
-        }  
-    }
-	.todo-item-wrap {
-		// padding-right: 3%;
+	&:hover {
+		.td-btn {
+			.del-btn {
+				display: block;
+			}
+		}
 	}
 	.td-btn {
-		color: #ff8080;
-		display: none;
-		position: absolute;
-        right: 0;
+		display: flex;
+		.del-btn {
+			display: none;
+		}
 	}
-	.update-btn {
-		color:#4c56dd ;
+	.todo-item-wrap{
+		margin:0;
 	}
-    
+}
+.tab-flex {
+	display: flex;
+	justify-content: space-around;
+}
+.hide {
+	display: none;
+}
+.form-wraper {
+	width: 100%;
+}
+.add-wraper {
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	margin-bottom: -20px;
+	margin-top: 30px;
 }

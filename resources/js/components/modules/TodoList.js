@@ -1,8 +1,7 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
-import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import Divider from "@mui/material/Divider";
+import EditIcon from "@mui/icons-material/Edit";
 import {
 	Checkbox,
 	Dialog,
@@ -11,7 +10,8 @@ import {
 	DialogContent,
 	DialogContentText,
 	DialogTitle,
-	Snackbar
+	Snackbar,
+	Divider
 } from "@material-ui/core";
 import axios from "../axios";
 import { Alert } from "@mui/material";
@@ -24,7 +24,7 @@ import {
 
 import DeleteIcon from "@mui/icons-material/Delete";
 
-const TodoList = ({ title, id, status, setActiveId }) => {
+const TodoList = ({ title, dataId, status, setformData, setStatus }) => {
 	const [ckStatus, setckStatus] = useState({
 		modalState: false,
 		status: status,
@@ -32,13 +32,17 @@ const TodoList = ({ title, id, status, setActiveId }) => {
 	});
 	const handleChange = e => {
 		setckStatus({ ...ckStatus, status: e.target.checked });
+		setStatus({
+			dataId : dataId,
+			status:  e.target.checked ? "Done" : "New"
+		})
 	};
 	const deleteTask = async e => {
 		const response = await axios
-			.get("/delete_todo?id=" + id)
+			.get("/delete_todo?id=" + dataId)
 			.then(function(res) {
-				document.getElementById("task-" + id).remove();
-				setckStatus({ ...ckStatus, modalState: false, alert:true });
+				document.getElementById("task-" + dataId).remove();
+				setckStatus({ ...ckStatus, modalState: false, alert: true });
 			})
 			.catch(error => console.log(error));
 	};
@@ -50,44 +54,48 @@ const TodoList = ({ title, id, status, setActiveId }) => {
 	};
 
 	return (
-		<div>
-			<List className="todo-list" style={{ width: "100%" }} id={"task-" + id}>
-				<ListItem style={{ width: "100%" }}>
-					<FormControlLabel
-						className="todo-item-wrap"
-						style={{ width: "100%" }}
-						control={
-							<Checkbox
-								onChange={handleChange}
-								checked={ckStatus.status || false}
-							/>
-						}
-						label={
-							<CardContent style={{ padding: 20 }}>
-								{<Typography variant="subtitle1">{title}</Typography>}
-							</CardContent>
-						}
+		<ListItem
+			className="todo-list"
+			style={{ width: "100%" }}
+			key={"key-" + dataId}
+			id={"task-" + dataId}
+		>
+			<FormControlLabel
+				className="todo-item-wrap"
+				style={{ width: "100%" }}
+				control={
+					<Checkbox
+						onChange={handleChange}
+						checked={ckStatus.status || false}
+						
 					/>
-					<IconButton
-						color="primary"
-						aria-label="Delete"
-						component="span"
-						onClick={e => {
-							setckStatus({ ...ckStatus, modalState: true });
-						}}
-					>
-						<DeleteIcon className="del-btn td-btn" />
-					</IconButton>
-					<IconButton
-						color="primary"
-						aria-label="Update to done"
-						component="span"
-						onClick={ () => setActiveId(id)}
-					>
-						<DeleteIcon className="update-btn td-btn" />
-					</IconButton>
-				</ListItem>
-			</List>
+				}
+				label={
+					<CardContent style={{ padding: 20 }}>
+						{<Typography variant="subtitle1">{title}</Typography>}
+					</CardContent>
+				}
+			/>
+			<div className="td-btn">
+				<IconButton
+					className="del-btn"
+					color="primary"
+					aria-label="Delete"
+					component="span"
+					onClick={e => {
+						setckStatus({ ...ckStatus, modalState: true });
+					}}
+				>
+					<DeleteIcon color="error" />
+				</IconButton>
+				<IconButton
+					aria-label="Update to done"
+					component="span"
+					onClick={e => setformData({ dataId, title })}
+				>
+					<EditIcon color="info" />
+				</IconButton>
+			</div>
 			<Dialog
 				open={ckStatus.modalState}
 				aria-labelledby="alert-dialog-title"
@@ -112,12 +120,17 @@ const TodoList = ({ title, id, status, setActiveId }) => {
 					</Button>
 				</DialogActions>
 			</Dialog>
-			<Snackbar open={ckStatus.alert} autoHideDuration={1500} onClose={handleClose}>
-				<Alert onClose={handleClose} severity="success" sx={{ width: '50%' }}>
-					This is a success message!
+			<Snackbar
+				open={ckStatus.alert}
+				autoHideDuration={1500}
+				onClose={handleClose}
+			>
+				<Alert onClose={handleClose} severity="success" sx={{ width: "50%" }}>
+					Successfully Deleted Task!
 				</Alert>
 			</Snackbar>
-		</div>
+			<Divider />
+		</ListItem>
 	);
 };
 

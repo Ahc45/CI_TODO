@@ -61,8 +61,11 @@ class Todos_m extends MY_Model
 		if (array_key_exists('id', $params) && $params['id'] != null) {
 			$this->db->where('id', $params['id']);
 		}
-		if (array_key_exists('is_deleted', $params)) {
+		if (array_key_exists('is_deleted', $params) ) {
 			$this->db->where('is_deleted', $params['is_deleted']);
+		} 
+		if (array_key_exists('status', $params) && $params['status'] != null) {
+			$this->db->where('status', $params['status']);
 		}
 		
 		if (array_key_exists('where', $params)) {
