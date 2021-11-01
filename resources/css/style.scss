@@ -1,0 +1,60 @@
+body{
+	background-color: #EDEDED;
+}
+.main {
+	-webkit-box-shadow: 3px 11px 11px 0px rgba(125, 125, 125, 0.18),
+		-6px -2px 11px 0px rgba(255, 255, 255, 0.87);
+	box-shadow: 3px 11px 11px 0px rgba(125, 125, 125, 0.18),
+		-6px -2px 11px 0px rgba(255, 255, 255, 0.87) !important;
+	margin: auto;
+	background-color: #EDEDED !important;
+	border-radius: 15px !important;
+	margin-top: 50px;
+	margin-bottom: 20px !important;
+	.hero-text {
+		margin: 30px;
+	}
+	min-width: 60% ;
+}
+
+.new-task {
+	margin: 15px 3%;
+	text-align: center;
+}
+.todo-list {
+	position: relative;
+	padding-inline-start: 0px;
+	&:hover {
+		.td-btn {
+			.del-btn {
+				display: block;
+			}
+		}
+	}
+	.td-btn {
+		display: flex;
+		.del-btn {
+			display: none;
+		}
+	}
+	.todo-item-wrap{
+		margin:0;
+	}
+}
+.tab-flex {
+	display: flex;
+	justify-content: space-around;
+}
+.hide {
+	display: none;
+}
+.form-wraper {
+	width: 100%;
+}
+.add-wraper {
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	margin-bottom: -20px;
+	margin-top: 30px;
+}
