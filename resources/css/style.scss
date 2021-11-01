@@ -1,18 +1,22 @@
 .todo-list {
     position: relative;
+	padding-inline-start: 0px;
     &:hover{
-        .del-btn {
+        .del-btn,.update-btn {
             display: block;
         }  
     }
 	.todo-item-wrap {
 		// padding-right: 3%;
 	}
-	.del-btn {
+	.td-btn {
 		color: #ff8080;
 		display: none;
 		position: absolute;
         right: 0;
+	}
+	.update-btn {
+		color:#4c56dd ;
 	}
     
 }

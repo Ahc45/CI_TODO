@@ -40,10 +40,10 @@ class Todos extends CI_Controller {
 		]);
 	}
 	public function delete_todo(){
-		$this->todos_m->delette((int) post('id'));
+		$this->todos_m->delete((int) get('id'));
 		response([
 			'data' => [
-				'post' => $_POST,
+				'post' => $_GET,
 				'is_valid' => 1
 			],
 			'status'=> 200
