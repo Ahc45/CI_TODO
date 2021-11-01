@@ -1,0 +1,10 @@
+AWS SERVER Installation
+
+-- intall apache
+sudo apt-get apache2
+
+-- instal mysql and php
+ sudo apt-get install php libapache2 -mod-php php-mcrypt php-mysql
+
+ -- tutorial
+ https://www.cloudbooklet.com/install-cpanel-whm-on-aws-ec2-instance/

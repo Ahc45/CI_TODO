@@ -14,7 +14,9 @@ class Todos extends CI_Controller {
 		
 	}
 	function get_todos(){
-		$todos = $this->todos_m->get_todos([])->result();
+		$todos = $this->todos_m->get_todos([
+			'is_deleted' => 0
+		])->result();
 		if($todos){
 			response([
 				'data' => ['todos' => $todos],
@@ -23,7 +25,6 @@ class Todos extends CI_Controller {
 		}
 	}
 	public function post_todo(){
-		
 		$this->todos_m->save([
 			'title' => post('title'),
 			'status' => post('status')
@@ -38,5 +39,15 @@ class Todos extends CI_Controller {
 			
 		]);
 	}
-	
+	public function delete_todo(){
+		$this->todos_m->delette((int) post('id'));
+		response([
+			'data' => [
+				'post' => $_POST,
+				'is_valid' => 1
+			],
+			'status'=> 200
+			
+		]);
+	}
 }

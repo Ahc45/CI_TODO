@@ -22,7 +22,6 @@ const TodoList = props => {
 	const [todo, setTodo] = useState([props]);
 	const [status, setStatus] = useState([props.status]);
 	
-
     const handleChange = (e) => {
         console.log(e)
     }

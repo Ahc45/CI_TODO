@@ -23,7 +23,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost:8888/';
+if($_SERVER['CI_ENV']== "prduction"){
+    $config['base_url'] = 'http://3.144.80.164/';
+}else{ 
+    $config['base_url'] = 'http://localhost:8888/';
+}
 
 /*
 |--------------------------------------------------------------------------

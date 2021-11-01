@@ -14,4 +14,7 @@
     - git commit -m "Set up core frontend"
     - git push 
     - git flow feature start create-function
-    
+    - git add .
+    - git commit -m "create function"
+    - git flow feature finish create-function
+    - git push
