@@ -1,10 +1,10 @@
 # TODO Application
-### Create by : DAVE MARK CANDAR
+### Created by : DAVE MARK CANDAR
 
 ### How To Run
 - install depedencies `$ npm install`
 - locate the php config file in `root_folder/application/config/config.php`
--  change the  `localhost:888` if you are not using 8888 in your apache port
+-  change the  `localhost:8888` if you are not using 8888 in your apache port
 - locate the base_url of react in `root_folder/resources/js/components/axios.js` then in 
   ```
     const instance = axios.create({
