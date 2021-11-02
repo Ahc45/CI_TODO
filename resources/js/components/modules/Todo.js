@@ -71,6 +71,7 @@ const Todo = () => {
 			.then(function(res) {
 				if (res.data.is_valid) {
 					getTodos();
+					setAlert({state: true, message: `New task has been added!` })
 				}
 				setformData({
 					title: "",
