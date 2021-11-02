@@ -1,7 +1,7 @@
 # TODO Application
 ### Create by : DAVE MARK CANDAR
 
-###### How To Run
+### How To Run
 - install depedencies `$ npm install`
 - locate the php config file in `root_folder/application/config/config.php`
 -  change the  `localhost:888` if you are not using 8888 in your apache port
@@ -14,7 +14,7 @@
   ```
 - run command inside root_folder `$ npm run dev`
 
-######  Git Commands
+###  Git Commands
 ```
      git init
      git remote add origin https://github.com/Ahc45/CI_TODO.git
@@ -28,3 +28,5 @@
      git flow feature finish create-function
      git flow release start v1
 ```
+
+### PROTECT OUTPUT (http://3.144.80.164/)
