@@ -13,6 +13,7 @@
     })
   ```
 - run command inside root_folder `$ npm run dev`
+- then go to Browser enter in address bar localhost8888/CI_TODO 
 
 ###  Git Commands
 ```
